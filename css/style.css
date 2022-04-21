@@ -19,3 +19,7 @@ ol {
   list-style-type: none;
   margin-right: 2em;
 }
+h2 {
+  line-height: 0.2em;
+  margin-top: 1.5em;
+}
