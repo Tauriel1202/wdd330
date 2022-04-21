@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Story Editor</title>
+    <script>
+      function loadStory(){
+        const name = document.querySelector('#name').value
+        let story = localStorage.getItem(name)
+        document.querySelector('#storyContent').value = story
+      }
+      function saveStory(){
+        const name = document.querySelector('#name').value
+        const story = document.querySelector('#storyContent').value
+        localStorage.setItem(name, story)
+      }
+      function displayStory(){
+        const content = document.querySelector('#storyContent').value
+        document.querySelector('.display').innerHTML = content
+      }
+    </script>
+
+    <style>
+      textarea {
+        width: 750px;
+        height: 250px;
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Story Editor</h1>
+    <label>Story Name:<input type="text" id="name" /></label>
+    <section>
+      <button onclick="loadStory()">Find and Edit</button>
+      <button onclick="saveStory()">Save</button>
+      <button onclick="displayStory()">Display Story</button>
+    </section>
+    <textarea
+      type="text"
+      id="storyContent"
+      placeholder="Awesome Story Here!"
+    ></textarea>
+    <section class="display"></section>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+header,
+h2 {
+  text-align: center;
+}
+header {
+  background-color: #007a54;
+  color: #f8f6f1;
+  padding: 1em;
+  border-radius: 10px 10px 0 0;
+}
+main {
+  border: 2px solid #007a54;
+  border-radius: 0 0 10px 10px;
+}
+ul,
+ol {
+  margin: 1em auto;
+  text-align: center;
+  list-style-type: none;
+  margin-right: 2em;
+}
