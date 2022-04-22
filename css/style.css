@@ -1,5 +1,6 @@
 body {
   max-width: 64rem;
+  margin: auto;
 }
 header,
 h2 {
