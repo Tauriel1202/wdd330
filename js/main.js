@@ -3,6 +3,10 @@ const links = [
   {
     title: "Week 1",
     url: "week1/index.html"
+  },
+  {
+    title: "Week 2",
+    url: "week2/index.html"
   }
 ]
 
