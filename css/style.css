@@ -23,7 +23,13 @@ ol {
   list-style-type: none;
   margin-right: 2em;
 }
+li {
+  margin: 0.5em 0;
+}
 h2 {
   line-height: 0.2em;
   margin-top: 1.5em;
+}
+a {
+  font-size: 1.2em;
 }
