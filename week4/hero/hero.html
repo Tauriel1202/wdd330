@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Hero Form</title>
+    
+    <link rel="stylesheet" type="text/css" href="hero.css">
+    
+    <script src="hero.js" defer></script>
+  </head>
+  <body>
+    <form id="hero">
+      <label for="heroName"
+        >Name:
+        <input
+          type="text"
+          id="heroName"
+          name="heroName"
+          placeholder="Your Super Hero Name"
+          maxlength="32"
+          required
+          />
+      </label>
+      <label for="realName"
+        >Real Name: <input type="password" name="realName" id="realName"
+      /></label>
+      <p>Super Powers:</p>
+      <label for="flight"
+        >Flight:
+        <input type="checkbox" id="flight" value="Flight" name="powers" />
+      </label>
+      <label for="armor"
+        >Armor:
+        <input type="checkbox" id="strength" value="Armor" name="powers" />
+      </label>
+      <label for="fire"
+        >Fire:
+        <input type="checkbox" id="speed" value="Fire" name="powers" />
+      </label>
+      <label for="energy"
+        >Energy Blasts:
+        <input
+          type="checkbox"
+          id="energy"
+          value="Energy Blasts"
+          name="powers"
+        />
+      </label>
+      <label for="mindPowers"
+        >Mind Reading or Foresight:
+        <input
+          type="checkbox"
+          id="mindPowers"
+          value="Mind Reading or Foresight"
+          name="powers"
+        />
+      </label>
+      <p>What type of hero are you?</p>
+      <label for="hero"
+        >Hero:
+        <input type="radio" name="category" value="Hero" id="hero" />
+      </label>
+      <label for="villain"
+        >Villain:
+        <input type="radio" name="category" value="Villain" id="villain" />
+      </label>
+      <label for="anti-hero"
+        >Anti-Hero:
+        <input type="radio" name="category" value="Antihero" id="anti-hero" />
+      </label>
+      <label for="age"
+        >Age: <input type="number" id="age" name="age" min="0" step="1"
+      /></label>
+      <label for='Home'>Base of Operations:
+        <select name='home' id='home'>
+        <option value='' selected>Choose a Base</option>
+        <option value='Lothlorien'>Lothlorien</option>
+        <option value='Mirkwood'>Mirkwood</option>
+        <option value='Camp Half-Blood'>Camp Half-Blood</option>
+        <option value='Fablehaven'>Fablehaven</option>
+        <option value='Nevarro'>Nevarro</option>
+        </select>
+        </label>
+        <label for='origin'>Origin Story:
+          <textarea id='origin' name='origin' rows='20' cols='60'></textarea>
+          </label>
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
