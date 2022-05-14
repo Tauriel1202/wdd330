@@ -4,7 +4,7 @@ form {
   padding: 1em;
   background-color: #f8f6f1;
 }
-.error{
+.error {
   background: #f99;
   border: #900 1px solid;
   display: none;
@@ -13,7 +13,8 @@ input {
   background-color: rgb(223, 223, 223);
   border: 2px solid #333;
 }
-#heroName, #realName {
+#heroName,
+#realName {
   display: block;
 }
 label:not(#heroName, #realName) {
@@ -31,4 +32,27 @@ button {
 }
 p {
   border-bottom: 2px solid #007a54;
-} 
+}
+option[value='Lothlorien'] {
+  background-color: rgb(253, 255, 119);
+}
+option[value='Mirkwood'] {
+  background-color: #007a54;
+  color: #f8f6f1;
+}
+option[value='Camp Half-Blood'] {
+  background-color: #ff7300;
+  color: #000;
+}
+option[value='Fablehaven'] {
+  background-color: rgb(107, 62, 31);
+  color: rgb(241, 255, 242);
+}
+option[value='Nevarro'] {
+  background-color: rgb(223, 223, 223);
+  color: #000;
+}
+option[value="Dragon's Edge"]{
+  background-color: #ff0000;
+  color: #fff;
+}
