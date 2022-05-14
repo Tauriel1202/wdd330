@@ -3,12 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name='description' content='Build your hero! Name, real name, base, power, and more!' />
+    <meta
+      name="description"
+      content="Build your hero! Name, real name, base, power, and more!"
+    />
 
     <title>Hero Form</title>
-    
-    <link rel="stylesheet" type="text/css" href="hero.css">
-    
+
+    <link rel="stylesheet" type="text/css" href="hero.css" />
+
     <script src="hero.js" defer></script>
   </head>
   <body>
@@ -22,7 +25,7 @@
           placeholder="Your Super Hero Name"
           maxlength="32"
           required
-          />
+        />
       </label>
       <label for="realName"
         >Real Name: <input type="password" name="realName" id="realName"
@@ -74,19 +77,21 @@
       <label for="age"
         >Age: <input type="number" id="age" name="age" min="0" step="1"
       /></label>
-      <label for='Home'>Base of Operations:
-        <select name='home' id='home'>
-        <option value='' selected>Choose a Base</option>
-        <option value='Lothlorien'>Lothlorien</option>
-        <option value='Mirkwood'>Mirkwood</option>
-        <option value='Camp Half-Blood'>Camp Half-Blood</option>
-        <option value='Fablehaven'>Fablehaven</option>
-        <option value='Nevarro'>Nevarro</option>
+      <label for="Home"
+        >Base of Operations:
+        <select name="home" id="home">
+          <option value="" selected>Choose a Base</option>
+          <option value="Lothlorien">Lothlorien</option>
+          <option value="Mirkwood">Mirkwood</option>
+          <option value="Camp Half-Blood">Camp Half-Blood</option>
+          <option value="Fablehaven">Fablehaven</option>
+          <option value="Nevarro">Nevarro</option>
         </select>
-        </label>
-        <label for='origin'>Origin Story:
-          <textarea id='origin' name='origin' rows='20' cols='60'></textarea>
-          </label>
+      </label>
+      <label for="origin"
+        >Origin Story:
+        <textarea id="origin" name="origin" rows="20" cols="60"></textarea>
+      </label>
       <button type="submit">Submit</button>
     </form>
   </body>
