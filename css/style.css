@@ -36,3 +36,6 @@ a {
 .lstLst {
   color: rgba(255, 8, 0, 0.856);
 }
+p {
+  margin: 2%;
+}

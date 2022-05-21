@@ -1,0 +1,4 @@
+div:not(.todoLst) {
+  display: flex;
+  align-items: center;
+}

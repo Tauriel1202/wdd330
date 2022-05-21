@@ -24,26 +24,33 @@ function add() {
 function display() {
   const oneTodo = document.createElement("div");
   todos.forEach((todo) => {
-    oneTodo.innerHTML = `<label><input type="checkbox" name="check" id="check"></label> ${todo} <button class="remove">❌</button>`;
+    oneTodo.innerHTML = `<label><input type="checkbox" name="check" id="check"></label><p>${todo}</p><button class="remove">❌</button>`;
   });
   lst.append(oneTodo);
 }
 
-//Remove Todo
 lst.addEventListener("click", (e) => {
+  //Remove Todo
   if (e.target.innerHTML === "❌") {
     const index = Array.from(lst.children).indexOf(e.target.parentElement);
     todos.pop(index);
     e.target.parentElement.remove();
   }
+
+  //Done
+  if (e.target.checked) {
+    let p = e.target.parentElement.nextSibling
+    p.innerHTML = `<strike>${p.innerHTML}</strike>`
+  }
+  else {
+    let p = e.target.parentElement.nextSibling
+    p.innerHTML = `${p.children[0].innerHTML}`
+  }
 });
 
-//Completed
-function done() {
-  if (document.querySelector("#check") === true) {
-    console.log("🌷");
-  }
-}
+
+
+
 
 // function clear(){
 //   input.value.textContent = '';
