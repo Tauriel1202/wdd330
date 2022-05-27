@@ -2,3 +2,49 @@ div:not(.todoLst) {
   display: flex;
   align-items: center;
 }
+body {
+  background-image: url('./images/forestBground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main, footer {
+  background-color: rgb(236, 227, 209);
+  max-width: 32em;
+  margin: auto;
+}
+h1 {
+  text-align: center;
+}
+.todoLst {
+  border-top: 1.5px solid #007a54;
+  border-bottom: 1.5px solid #007a54;
+}
+.todoLst p {
+  width: 85%;
+  font-size: 1.1em;;
+}
+.todoLst label {
+  margin-left: 2%;
+}
+.btns {
+  margin: 0 10%;
+}
+.btns p {
+  padding: 0.3em;
+  margin: 1em;
+}
+.btns button {
+  width: 6em;
+  margin: auto;
+  padding: 0.3em;
+}
+footer {
+  border-top: 1.5px solid green;
+  padding: 1em 0;
+}
+footer label {
+  margin-left: 30%;
+}
+footer input {
+  height: 1.3em;
+}
