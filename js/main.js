@@ -23,6 +23,10 @@ const links = [
   {
     title: "Midterm Challenge",
     url: "challenge1/index.html"
+  },
+  {
+    title: "Week 7",
+    url: "week7/index.html"
   }
 ]
 

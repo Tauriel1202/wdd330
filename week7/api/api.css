@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #007a54;
+  display: grid;
+}
+h1 {
+  text-align: center;
+  background-color: #f8f6f1;
+  padding: 1em;
+}
+#w {
+  background-color: rgb(0, 191, 255);
+  padding: 1em;
+  border: 2px solid white;
+  margin: 0 2em;
+}
+#t {
+  background-color: white;
+  border: 2px solid rgb(142, 227, 255);
+  padding: 1em;
+  margin: 0 2em;
+}
+.btns {
+  margin: 2em auto;
+}
+.sharedDiv {
+  margin: auto;
+  display: flex;
+}
+.forecast {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid #0ac6ff;
+  margin: 1em;
+  padding: 1%;
+  width: 8.5em;
+}
+.forecast img, .temples img {
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.forecast h2, .forecast h3, .forecast p, .temples h2, .temples p {
+  text-align: center;
+}
+.temples {
+  background-color: white;
+  margin: 2%;
+  padding: 1%;
+  width: 21em;
+}
+.temples h2 {
+  padding: 0.5em;
+}
+.temples p {
+  margin: 1em 0;
+}
+span {
+  color: #f8f6f1;
+  font-size: 2em;
+}
