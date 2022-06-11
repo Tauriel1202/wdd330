@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="disaster.js"></script>
+
+    <style>
+      .f {
+        background-color: yellow;
+        color: red;
+      }
+      .fl {
+        background-color: lightblue;
+        color: darkblue;
+      }
+      .w {
+        background-color: lightgray;
+        color: black;
+      }
+      .v {
+        background-color: red;
+        color: black;
+      }
+      .o {
+        background-color: orange;
+        color: brown;
+      }
+      .l {
+        background-color: grey;
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Natural Disasters 2022</h1>
+    <table>
+      <tbody>
+        <tr class="v">
+          <td class="date">2022-06-05</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15848"
+              >PHL: Volcanic Eruption - 2022-06 - Bulusan Volcano Eruption</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/6012"
+              >PHL: Volcanic Eruption - 2022-06 - Bulusan Volcano Eruption</a
+            >
+          </td>
+          <td class="dtype">Volcanic Eruption</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/136"
+              >Philippines</a
+            >
+          </td>
+        </tr>
+        <tr id="fl">
+          <td class="date">2022-06-01</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15844"
+              >CRI: Inundación pluvial / riada - 2022-05 - Aguaceros fuertes con
+              tormenta esta tarde en el país #3 (2022-05-31)</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5936"
+              >Costa Rica: Afectación por Temporada de Lluvias 2022</a
+            >
+          </td>
+          <td class="dtype">Pluvial/Flash Flood</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/51"
+              >Costa Rica</a
+            >
+          </td>
+        </tr>
+        <tr class="w">
+          <td class="date">2022-05-31</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15839"
+              >GTM: Ciclón - 2022-05 - Tropical Depression Agatha</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/6004"
+              >GTM: Ciclón - 2022-05 - Tropical Depression Agatha</a
+            >
+          </td>
+          <td class="dtype">Cyclone</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/76"
+              >Guatemala</a
+            >
+          </td>
+        </tr>
+        <tr class="w">
+          <td class="date">2022-05-30</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15838"
+              >GTM: Ciclón - 2022-05 - Guatemala - Central America: Huracán
+              Agatha 30/05/2022</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/6002"
+              >GTM: Ciclón - 2022-05 - Guatemala - Central America: Huracán
+              Agatha 30/05/2022</a
+            >
+          </td>
+          <td class="dtype">Cyclone</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/76"
+              >Guatemala</a
+            >
+          </td>
+        </tr>
+        <tr class="fl">
+          <td class="date">2022-05-30</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15837"
+              >BLZ: Flood - 2022-06 - Belize Flood Hazard - June 2022</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/6001"
+              >BLZ: Flood - 2022-06 - Belize Flood Hazard - June 2022</a
+            >
+          </td>
+          <td class="dtype">Flood</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/31"
+              >Belize</a
+            >
+          </td>
+        </tr>
+        <tr class="fl">
+          <td class="date">2022-05-30</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15836"
+              >SUR: Flood - 2022-03 - Suriname: All regions Floods 3/2022</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/6000"
+              >SUR: Flood - 2022-03 - Suriname: All regions Floods 3/2022</a
+            >
+          </td>
+          <td class="dtype">Flood</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/180"
+              >Suriname</a
+            >
+          </td>
+        </tr>
+        <tr class="w">
+          <td class="date">2022-05-28</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15830"
+              >GTM: Cyclone - 2022-05 - Guatemala - Central America: Tormenta
+              Tropical Agatha</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5998"
+              >GTM: Cyclone - 2022-05 - Guatemala - Central America: Tormenta
+              Tropical Agatha</a
+            >
+          </td>
+          <td class="dtype">Cyclone</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/76"
+              >Guatemala</a
+            >
+          </td>
+        </tr>
+        <tr class="q">
+          <td class="date">2022-05-26</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15826"
+              >BOL: Terremoto - 2022-07 - Temblor 5.4 ciudad de La Paz , efectos
+              de terremoto 7,2 en sur Peru</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5995"
+              >BOL: Terremoto - 2022-07 - Temblor 5.4 ciudad de La Paz , efectos
+              de terremoto 7,2 en sur Peru</a
+            >
+          </td>
+          <td class="dtype">Earthquake</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/33"
+              >Bolivia</a
+            >
+          </td>
+        </tr>
+        <tr class="fl">
+          <td class="date">2022-05-25</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15825"
+              >GUY: Flood - 2022-05 - Guyana Floods May 2022</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5994"
+              >GUY: Flood - 2022-05 - Guyana Floods May 2022</a
+            >
+          </td>
+          <td class="dtype">Flood</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/79"
+              >Guyana</a
+            >
+          </td>
+        </tr>
+        <tr class="h">
+          <td class="date">2022-05-25</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15824"
+              >PAK: Heat Wave - 2022-05 - Heatwave</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5993"
+              >PAK: Heat Wave - 2022-05 - Heatwave</a
+            >
+          </td>
+          <td class="dtype">Heat Wave</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/131"
+              >Pakistan</a
+            >
+          </td>
+        </tr>
+        <tr class="fl">
+          <td class="date">2022-05-24</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15822"
+              >STP: Inondation - 2022-05 - Inondations suite aux pluies
+              diluviennes à Principe</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5992"
+              >STP: Inondation - 2022-05 - Inondations suite aux pluies
+              diluviennes à Principe</a
+            >
+          </td>
+          <td class="dtype">Flood</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/185"
+              >Sao Tome and Principe</a
+            >
+          </td>
+        </tr>
+        <tr class="f">
+          <td class="date">2022-05-20</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15820"
+              >SEN: Fire - 2022-05 - feu de brousse dans le departement de Podor
+            </a>
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5988"
+              >SEN: Fire - 2022-05 - feu de brousse dans le departement de Podor
+            </a>
+          </td>
+          <td class="dtype">Fire</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/150"
+              >Senegal</a
+            >
+          </td>
+        </tr>
+        <tr class="l">
+          <td class="date">2022-05-19</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15819"
+              >UGA: Landslide - 2022-05 - Uganda – Western Region: Landslides
+              and Mudslides 05/2022</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5987"
+              >UGA: Landslide - 2022-05 - Uganda – Western Region: Landslides
+              and Mudslides 05/2022</a
+            >
+          </td>
+          <td class="dtype">Landslide</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/176"
+              >Uganda</a
+            >
+          </td>
+        </tr>
+        <tr class="w">
+          <td class="date">2022-05-19</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15818"
+              >UGA: Other - 2022-05 - Uganda - Western Region: Hailstorms
+              05/2022</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5986"
+              >UGA: Other - 2022-05 - Uganda - Western Region: Hailstorms
+              05/2022</a
+            >
+          </td>
+          <td class="dtype">Other</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/176"
+              >Uganda</a
+            >
+          </td>
+        </tr>
+        <tr class="fl">
+          <td class="date">2022-05-19</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15815"
+              >BGD: Flood - 2022-05 - Bangladesh : Flash Flood</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5983"
+              >Bangladesh - Flash Flood May 2022</a
+            >
+          </td>
+          <td class="dtype">Flood</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/27"
+              >Bangladesh</a
+            >
+          </td>
+        </tr>
+        <tr class="w">
+          <td class="date">2022-05-17</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15813"
+              >CRI: Cyclone - 2022-05 - Afectación por Zona de Convergencia
+              Intertropical #2 (2022-05-17)</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5936"
+              >Costa Rica: Afectación por Temporada de Lluvias 2022</a
+            >
+          </td>
+          <td class="dtype">Cyclone</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/51"
+              >Costa Rica</a
+            >
+          </td>
+        </tr>
+        <tr class="w">
+          <td class="date">2022-05-17</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15811"
+              >URY: Ciclón - 2022-05 - Ciclón extra tropical #2 (2022-05-17)</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5982"
+              >URY: Ciclón extratropical</a
+            >
+          </td>
+          <td class="dtype">Cyclone</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/5"
+              >Uruguay</a
+            >
+          </td>
+        </tr>
+        <tr class="w">
+          <td class="date">2022-05-16</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15807"
+              >URY: Ciclón - 2022-05 - Alerta por Ciclón</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5982"
+              >URY: Ciclón extratropical</a
+            >
+          </td>
+          <td class="dtype">Cyclone</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/5"
+              >Uruguay</a
+            >
+          </td>
+        </tr>
+        <tr class="o">
+          <td class="date">2022-05-13</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15801"
+              >UGA: Other - 2022-05 - Uganda - Eastern Region: Hailstorm
+              05/2022</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5978"
+              >UGA: Other - 2022-05 - Uganda - Eastern Region: Hailstorm
+              05/2022</a
+            >
+          </td>
+          <td class="dtype">Other</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/176"
+              >Uganda</a
+            >
+          </td>
+        </tr>
+        <tr class="o">
+          <td class="date">2022-05-13</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15800"
+              >UGA: Other - 2022-05 - Uganda - Western Region: Hailstorm
+              05/2022</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5977"
+              >UGA: Other - 2022-05 - Uganda - Western Region: Hailstorm
+              05/2022</a
+            >
+          </td>
+          <td class="dtype">Other</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/176"
+              >Uganda</a
+            >
+          </td>
+        </tr>
+        <tr class="w">
+          <td class="date">2022-05-13</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15799"
+              >UGA: Other - 2022-05 - Uganda - Western Region: Hailstorms
+              05/2022</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5976"
+              >UGA: Other - 2022-05 - Uganda - Western Region: Hailstorms
+              05/2022</a
+            >
+          </td>
+          <td class="dtype">Other</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/176"
+              >Uganda</a
+            >
+          </td>
+        </tr>
+        <tr class="fl">
+          <td class="date">2022-05-13</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15797"
+              >CAF: Onde de tempête - 2022-05 - Pluie diluvienne et vents
+              violents à GADZI #2 (2022-05-13)</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5891"
+              >République Centrafricaine - Incendie</a
+            >
+          </td>
+          <td class="dtype">Storm Surge</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/44"
+              >Central African Republic</a
+            >
+          </td>
+        </tr>
+        <tr class="f">
+          <td class="date">2022-05-12</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15795"
+              >SVN: Complex Emergency - 2022-05 - Fire and explosion in chemical
+              factory</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5974"
+              >SVN: Complex Emergency - 2022-05 - Fire and explosion in chemical
+              factory</a
+            >
+          </td>
+          <td class="dtype">Complex Emergency</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/155"
+              >Slovenia</a
+            >
+          </td>
+        </tr>
+        <tr class="fl">
+          <td class="date">2022-05-11</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15793"
+              >UGA: Flood - 2022-04 - Uganda - Northern Region: Floods
+              04/2022</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5973"
+              >UGA: Flood - 2022-04 - Uganda - Northern Region: Floods
+              04/2022</a
+            >
+          </td>
+          <td class="dtype">Flood</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/176"
+              >Uganda</a
+            >
+          </td>
+        </tr>
+        <tr class="fl">
+          <td class="date">2022-05-11</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15792"
+              >UGA: Flood - 2022-05 - Uganda - Eastern Region: Floods 05/2022</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5972"
+              >UGA: Flood - 2022-05 - Uganda - Eastern Region: Floods 05/2022</a
+            >
+          </td>
+          <td class="dtype">Flood</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/176"
+              >Uganda</a
+            >
+          </td>
+        </tr>
+        <tr class="o">
+          <td class="date">2022-05-11</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15791"
+              >UGA: Other - 2022-05 - Uganda - Western Region: Heavy Storms
+              05/2022</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5971"
+              >UGA: Other - 2022-05 - Uganda - Western Region: Heavy Storms
+              05/2022</a
+            >
+          </td>
+          <td class="dtype">Other</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/176"
+              >Uganda</a
+            >
+          </td>
+        </tr>
+        <tr class="fl">
+          <td class="date">2022-05-06</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15783"
+              >SUR: Flood - 2022-05 - Suriname: Flood - 2022-05</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5965"
+              >SUR: Flood - 2022-05 - Suriname: Flood - 2022-05</a
+            >
+          </td>
+          <td class="dtype">Flood</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/180"
+              >Suriname</a
+            >
+          </td>
+        </tr>
+        <tr class="fl">
+          <td class="date">2022-05-06</td>
+          <td class="name">
+            <a
+              class="link--table"
+              title="View Field Report"
+              href="/reports/15781"
+              >IRQ: فيضان - 2022-05 - Rapid response to rain floods in Iraq @ #1
+              (2022-05-06)</a
+            >
+          </td>
+          <td class="event">
+            <a
+              class="link--table"
+              title="View Emergency"
+              href="/emergencies/5758"
+              >Iran,flash flood 01/01/2022</a
+            >
+          </td>
+          <td class="dtype">Flood</td>
+          <td class="countries">
+            <a class="link--table" title="View Country" href="/countries/87"
+              >Iraq</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
