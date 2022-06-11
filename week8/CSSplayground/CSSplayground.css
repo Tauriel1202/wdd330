@@ -4,11 +4,15 @@
 #target {
   margin-left: 1em;
 }
-h1:hover span:first-of-type {
+h1 {
+  text-align: center;
+  border-bottom: 2px solid purple;
+}
+h2:hover span:first-of-type {
   display: inline-block;
   transform: translate(2.1em, 0.5em);
 }
-h2:first-of-type:hover #tree {
+h2:hover #tree {
   display: inline-block;
   transform: scale(3);
   margin-left: 1em;
@@ -20,4 +24,10 @@ h2:first-of-type:hover #tree {
 #all:hover span {
   display: inline-block;
   transform: translate(3.3em) scale(3) rotate(10deg);
+}
+main {
+  max-width: 32em;
+  margin: auto;
+  padding: 0 2em;
+  border: 2px solid #007a54;
 }
