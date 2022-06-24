@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A Form Validation Exercise." />
+
+    <title>Favorite fruit start</title>
+
+    <link rel="stylesheet" type="text/css" href="./fruit.css" />
+  </head>
+
+  <body>
+    <form>
+      <fieldset>
+        <label>Name: <input type='text' id='name' name='name' required></label>
+
+        <p>What fruits would you like?</p>
+        <label><input type='checkbox' name="fruit" id="fruit">Apple</label>
+        <label><input type='checkbox' name="fruit" id="fruit">Banana</label>
+        <label><input type='checkbox' name="fruit" id="fruit">Cherry</label>
+        <label><input type='checkbox' name="fruit" id="fruit">Lemon</label>
+        <label><input type='checkbox' name="fruit" id="fruit">Lime</label>
+        <label><input type='checkbox' name="fruit" id="fruit">Orange</label>
+        <label><input type='checkbox' name="fruit" id="fruit">Strawberry</label>
+        <label
+        >How many would you like?<input
+        type="number"
+        id="num"
+        name="amount"
+        value="1"
+        min="1"
+        max="10"
+        /></label>
+        <label>Email: <input type='email' name='mail' id='mail' required></label>
+      </fieldset>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

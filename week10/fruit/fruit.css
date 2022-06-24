@@ -1,0 +1,25 @@
+input:invalid {
+  border: 2px dashed red;
+}
+
+input:valid {
+  border: 2px solid black;
+}
+
+input:invalid:required {
+  background-image: linear-gradient(to right, lightyellow, pink);
+}
+
+input {
+  background-color: lightyellow;
+  border: 2px solid red;
+}
+form {
+  display: grid;
+}
+fieldset {
+  display: grid;
+}
+#num {
+  margin: 1em 0;
+}
