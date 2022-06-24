@@ -17,6 +17,7 @@ a {
 }
 nav ul li:hover {
   background-color: black;
+  color: white;
   padding: 0.5em;
 }
 #quakeList {
