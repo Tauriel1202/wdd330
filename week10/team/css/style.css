@@ -17,8 +17,10 @@ a {
 }
 nav ul li:hover {
   background-color: black;
-  color: white;
   padding: 0.5em;
+}
+nav ul li:hover a {
+  color: white;
 }
 #quakeList {
   margin: 2%;
