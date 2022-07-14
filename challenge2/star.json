@@ -1,0 +1,93 @@
+{
+  "results": [
+    {
+      "name": "Rey",
+      "homeworld": "Jakku",
+      "films": 4,
+      "gender": "female",
+      "eye_color": "brown",
+      "hair_color": "dark brown",
+      "skin_color": "fair",
+      "starships": "Millenium Falcon, Tie Silencer, Luke's X-wing"
+    },
+    {
+      "name": "Mando",
+      "homeworld": "Nevarro",
+      "films": 19,
+      "gender": "male",
+      "eye_color": "brown",
+      "hair_color": "dark brown",
+      "skin_color": "fair",
+      "starships": "Razor Crest, N-1 Starfighter"
+    },
+    {
+      "name": "Grogu",
+      "homeworld": "Coruscant",
+      "films": 19,
+      "gender": "male",
+      "eye_color": "dark brown",
+      "hair_color": "grey",
+      "skin_color": "green",
+      "starships": "Razor Crest, N-1 Starfighter"
+    },
+    {
+      "name": "Armorer",
+      "homeworld": "Mandalore",
+      "films": 5,
+      "gender": "female",
+      "eye_color": "unknown",
+      "hair_color": "unknown",
+      "skin_color": "gold and red"
+    },
+    {
+      "name": "Cara",
+      "homeworld": "Alderaan",
+      "films": 12,
+      "gender": "female",
+      "eye_color": "brown",
+      "hair_color": "black",
+      "skin_color": "fair",
+      "starships": "Razor Crest"
+    },
+    {
+      "name": "Finn",
+      "homeworld": "unknown",
+      "films": 4,
+      "gender": "male",
+      "eye_color": "brown",
+      "hair_color": "black",
+      "skin_color": "brown",
+      "starships": "Millenium Falcon, Tie Fighter"
+    },
+    {
+      "name": "BB-8",
+      "homeworld": "Resistance Base",
+      "films": 4,
+      "gender": "male",
+      "eye_color": "black",
+      "hair_color": "none",
+      "skin_color": "orange and white",
+      "starships": "Millenium Falcon, X-wing"
+    },
+    {
+      "name": "Asoka Tano",
+      "homeworld": "Coruscant",
+      "films": 3,
+      "gender": "female",
+      "eye_color": "blue",
+      "hair_color": "white and blue",
+      "skin_color": "copper",
+      "starships": "Starfighter"
+    },
+    {
+      "name": "Fennec Shand",
+      "homeworld": "unknown",
+      "films": 4,
+      "gender": "female",
+      "eye_color": "brown",
+      "hair_color": "black",
+      "skin_color": "fair",
+      "starships": "Slave 1, Razor Crest"
+    }
+  ]
+}

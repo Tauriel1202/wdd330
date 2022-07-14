@@ -1,0 +1,21 @@
+* {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #0f003e;
+  color: rgb(255, 242, 0);
+}
+h1 {
+  font-size: 1.9em;
+  padding-bottom: 0.4em;
+  border-bottom: 3px inset #fff200;
+  margin-bottom: 1em;
+}
+h2 {
+  margin: 1em;
+}
+p {
+  margin: 0.3em;
+}
