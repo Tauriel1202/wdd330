@@ -9,7 +9,6 @@ const jUrl = "https://tauriel1202.github.io/wdd330/challenge2/json/star.json";
 const jUrl2 = "https://tauriel1202.github.io/wdd330/challenge2/json/star2.json";
 
 let url2 = false;
-let url3 = false;
 let oldJsobj;
 
 export class Fetch {
@@ -24,6 +23,8 @@ export class Fetch {
         if (jsObject.next == null) {
           oldJsobj = jsObject;
           url2 = jUrl;
+        } else {
+          url2 = jsObject.next;
         }
         if (!jsObject.next) {
           changeMaxPage(page);
@@ -35,19 +36,6 @@ export class Fetch {
               // loadStats: extendObj => jsObject, jsObject2
               jsObject.results = [...jsObject.results, ...jsObject2.results];
               this.loadStats(jsObject);
-
-              //load json 2
-              if ((jsObject.results.length == 10)) {
-                fetch(url3)
-                  .then((response) => response.json())
-                  .then((jsObject3) => {
-                    jsObject.results = [
-                      ...jsObject.results,
-                      ...jsObject3.results,
-                    ];
-                    this.loadStats(jsObject);
-                  });
-              }
             });
         } else {
           this.loadStats(jsObject);

@@ -3,7 +3,7 @@ import { Fetch } from "./fetch.js";
 import { addLocal } from "./functions.js"; //REMOVE
 
 const url = "https://swapi.dev/api/people/?page=";
-const jUrl = "https://tauriel1202.github.io/wdd330/challenge2/star.json";
+const jUrl = "https://tauriel1202.github.io/wdd330/challenge2/json/star2.json";
 
 const Pbtn = document.querySelector("#prev");
 const Nbtn = document.querySelector("#next");
@@ -22,7 +22,13 @@ addLocal();
 //Next
 Nbtn.addEventListener("click", () => {
   page += page < maxPage ? 1 : 0;
-  fetch.createLst(url + page);
+
+  if (page >= 9) {
+    fetch.createLst(jUrl);
+    console.log(page)
+  } else {
+    fetch.createLst(url + page);
+  }
 });
 
 //Prev
@@ -32,11 +38,11 @@ Pbtn.addEventListener("click", () => {
   fetch.createLst(url + page);
 });
 
-function changePage(value){
-  page = value
+function changePage(value) {
+  page = value;
 }
-function changeMaxPage(value){
-  maxPage = value
+function changeMaxPage(value) {
+  maxPage = value;
 }
 
-export {page, maxPage, changePage, changeMaxPage}
+export { page, maxPage, changePage, changeMaxPage };

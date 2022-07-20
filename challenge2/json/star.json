@@ -1,4 +1,7 @@
 {
+  "next": "https://tauriel1202.github.io/wdd330/challenge2/json/star2.json",
+  "prev": "https://swapi.dev/api/people/?page=8",
+
   "results": [
     {
       "name": "Rey",
