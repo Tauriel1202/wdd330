@@ -1,38 +1,42 @@
 //Altogether
-import { createLst } from "./fetch.js";
-import { addLocal, listen } from "./functions.js"; //REMOVE
+import { Fetch } from "./fetch.js";
+import { addLocal } from "./functions.js"; //REMOVE
 
 const url = "https://swapi.dev/api/people/?page=";
+const jUrl = "https://tauriel1202.github.io/wdd330/challenge2/star.json";
+
 const Pbtn = document.querySelector("#prev");
 const Nbtn = document.querySelector("#next");
 let page = 1;
 let maxPage = 100;
 
+let fetch = new Fetch();
+
 //Creates char lst
-createLst(url);
+fetch.createLst(url);
+// fetch.jsonChars(jUrl);
 
-//REMOVE LATER
-// listen();
-// console.log(document.querySelector('option').value)
-
-console.log('😀')
+//adds team to local storage
 addLocal();
-// let team = document.querySelector("#tName");
-// let cBtn = document.querySelector("#create");
-// cBtn.addEventListener("click", () => {
-//   localStorage.setItem(team, myChars);
-// });
-
-//REMOVE LATER
 
 //Next
 Nbtn.addEventListener("click", () => {
   page += page < maxPage ? 1 : 0;
-  createLst(url + page);
+  fetch.createLst(url + page);
 });
 
 //Prev
 Pbtn.addEventListener("click", () => {
   page -= page > 1 ? 1 : 0;
-  createLst(url + page);
+
+  fetch.createLst(url + page);
 });
+
+function changePage(value){
+  page = value
+}
+function changeMaxPage(value){
+  maxPage = value
+}
+
+export {page, maxPage, changePage, changeMaxPage}

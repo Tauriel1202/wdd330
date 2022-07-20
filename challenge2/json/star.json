@@ -40,7 +40,7 @@
       "skin_color": "gold and red"
     },
     {
-      "name": "Cara",
+      "name": "Cara Dune",
       "homeworld": "Alderaan",
       "films": 12,
       "gender": "female",
@@ -70,7 +70,7 @@
       "starships": "Millenium Falcon, X-wing"
     },
     {
-      "name": "Asoka Tano",
+      "name": "Ashoka Tano",
       "homeworld": "Coruscant",
       "films": 3,
       "gender": "female",
@@ -78,16 +78,6 @@
       "hair_color": "white and blue",
       "skin_color": "copper",
       "starships": "Starfighter"
-    },
-    {
-      "name": "Fennec Shand",
-      "homeworld": "unknown",
-      "films": 4,
-      "gender": "female",
-      "eye_color": "brown",
-      "hair_color": "black",
-      "skin_color": "fair",
-      "starships": "Slave 1, Razor Crest"
     }
   ]
 }

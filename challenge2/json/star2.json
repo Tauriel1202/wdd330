@@ -1,0 +1,44 @@
+{
+  "results": [
+    {
+      "name": "Fennec Shand",
+      "homeworld": "unknown",
+      "films": 4,
+      "gender": "female",
+      "eye_color": "brown",
+      "hair_color": "black",
+      "skin_color": "fair",
+      "starships": "Slave 1"
+    },
+    {
+      "name": "Kylo Ren",
+      "homeworld": "unknown",
+      "films": 3,
+      "gender": "male",
+      "eye_color": "brown",
+      "hair_color": "black",
+      "skin_color": "fair",
+      "starships": "Tie Silencer"
+    },
+    {
+      "name": "IG-11",
+      "homeworld": "unknown",
+      "films": 3,
+      "gender": "male",
+      "eye_color": "black",
+      "hair_color": "n/a",
+      "skin_color": "silver/grey",
+      "starships": "Razor Crest"
+    },
+    {
+      "name": "Kuiil",
+      "homeworld": "unknown",
+      "films": 3,
+      "gender": "male",
+      "eye_color": "brown",
+      "hair_color": "white",
+      "skin_color": "fair",
+      "starships": "Razor Crest"
+    }
+  ]
+}

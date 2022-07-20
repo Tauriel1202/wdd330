@@ -1,27 +1,37 @@
 //Logic
 let myChars = [];
-
-document.getElementById('create').addEventListener('click', event =>{
-  document.querySelectorAll('select').forEach(selection =>{
-    console.log(selection.innerHTML)
-  })
-})
-
-//add listener to options, click to myChar
-export function listen() {
-  console.log("🌀");
-  // let option = document.querySelector('option').value
-  // console.log(option)
-}
+let save = {};
 
 //add team to local
+//add to local storage
 export function addLocal() {
-  listen();
-  console.log('🍍')
-
   let team = document.querySelector("#tName");
   let cBtn = document.querySelector("#create");
-  cBtn.addEventListener("click", () => {
-    localStorage.setItem(team, myChars);
+
+  cBtn.addEventListener("click", _ => {
+    if(localStorage.getItem('Teams')){
+      save = JSON.parse( localStorage.getItem('Teams'))
+    }
+    else {
+      save = {}
+    }
+    if (team.value != "") {
+      document.querySelectorAll("select").forEach((select) => {
+        myChars.push(select.value);
+      });
+
+      let teamName = team.value;
+      save[teamName] = myChars;
+
+      localStorage.setItem('Teams', JSON.stringify(save));
+    }
   });
+}
+
+//delete team
+export function deleteTeam(){
+  let saved = JSON.parse(localStorage.getItem('Teams'));
+  document.querySelectorAll('#del').addEventListener(() => {
+    console.log('💩💩💩💩💩💩💩')
+  })
 }
