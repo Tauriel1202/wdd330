@@ -5,9 +5,11 @@ import { page, changeMaxPage, changePage } from "./star.js";
 let view = new View();
 let charArray = [];
 const url = "https://swapi.dev/api/people/?page=";
-const jUrl = "https://tauriel1202.github.io/wdd330/challenge2/star.json";
+const jUrl = "https://tauriel1202.github.io/wdd330/challenge2/json/star.json";
+const jUrl2 = "https://tauriel1202.github.io/wdd330/challenge2/json/star2.json";
 
 let url2 = false;
+let url3 = false;
 let oldJsobj;
 
 export class Fetch {
@@ -33,6 +35,19 @@ export class Fetch {
               // loadStats: extendObj => jsObject, jsObject2
               jsObject.results = [...jsObject.results, ...jsObject2.results];
               this.loadStats(jsObject);
+
+              //load json 2
+              if ((jsObject.results.length == 10)) {
+                fetch(url3)
+                  .then((response) => response.json())
+                  .then((jsObject3) => {
+                    jsObject.results = [
+                      ...jsObject.results,
+                      ...jsObject3.results,
+                    ];
+                    this.loadStats(jsObject);
+                  });
+              }
             });
         } else {
           this.loadStats(jsObject);
@@ -75,7 +90,7 @@ export class Fetch {
 
       h2.textContent = name;
       h2.addEventListener("click", () => {
-        document.querySelectorAll("p").forEach((p) => p.remove());
+        document.querySelectorAll("#people p").forEach((p) => p.remove());
 
         //Gender
         const genP = document.createElement("p");
@@ -134,7 +149,7 @@ export class Fetch {
     }
   }
 }
-let f = new Fetch()
+let f = new Fetch();
 f.addChar(charArray, url);
 
 document.getElementById("a").addEventListener("click", (e) => {

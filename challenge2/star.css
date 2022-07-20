@@ -18,6 +18,7 @@ h1 {
 }
 h2 {
   margin: 1em;
+  cursor: pointer;
 }
 p {
   margin: 0.3em;
@@ -63,6 +64,9 @@ form button {
 #btns button:hover {
   border-right: 3px solid #00aeff;
   border-left: 3px solid red;
+}
+#display span {
+  cursor: pointer;
 }
 /*#endregion SMALL*/
 /*#region MED + LARGE*/

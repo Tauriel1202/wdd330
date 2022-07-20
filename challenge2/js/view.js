@@ -32,20 +32,27 @@ export class View {
 
   //displays created teams
   displayTeam() {
+    document.querySelector("#display").innerHTML = "";
+
     //parse localStorage
     let teams = JSON.parse(localStorage.getItem("Teams"));
     let you = document.createElement("h2");
     you.textContent = "Your Teams";
     document.querySelector("#display").append(you);
 
-    //get keys and loop through each of them
-    Object.keys(teams).forEach((team) => {
-      let div = document.createElement("div");
-      // div.innerHTML = "<h2>Your Teams</h2>";
-      div.innerHTML += `<h3>${team} <span id='del'>❌</span></h3>`;
-      div.innerHTML += `<p>${teams[team]}</p>`;
+    if (Object.keys(JSON.parse(localStorage.getItem("Teams"))).length) {
+      //get keys and loop through each of them
+      Object.keys(teams).forEach((team) => {
+        let div = document.createElement("div");
+        div.innerHTML += `<h3><span>${team}</span> <span id='del'>❌</span></h3>`;
+        div.innerHTML += `<p>${teams[team]}</p>`;
 
-      document.getElementById("display").append(div);
-    });
+        document.getElementById("display").append(div);
+      });
+    } else {
+      let p = document.createElement("p");
+      p.innerHTML = "You do not have any teams yet.";
+      document.querySelector("#display").append(p);
+    }
   }
 }
