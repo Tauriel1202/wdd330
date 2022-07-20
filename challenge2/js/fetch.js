@@ -17,25 +17,28 @@ export class Fetch {
     fetch(url)
       .then((response) => response.json())
       .then((jsObject) => {
+        console.log(jsObject)
         people.innerHTML = "";
 
         //New Page
-        if (jsObject.next == null) {
+        console.log(jsObject.next)
+        if (!jsObject.next) {
           oldJsobj = jsObject;
           url2 = jUrl;
-        } else {
-          url2 = jsObject.next;
+          console.log(url2)
         }
         if (!jsObject.next) {
           changeMaxPage(page);
         }
-        if (jsObject.results.length < 10) {
+        if (jsObject.results.length < 10 & jsObject.next == null) {
           fetch(url2)
             .then((response2) => response2.json())
             .then((jsObject2) => {
+              
               // loadStats: extendObj => jsObject, jsObject2
               jsObject.results = [...jsObject.results, ...jsObject2.results];
               this.loadStats(jsObject);
+             
             });
         } else {
           this.loadStats(jsObject);
@@ -45,6 +48,9 @@ export class Fetch {
 
   //create a lst of chars to select
   addChar(charArray, url) {
+    if (url == null){
+      url =jUrl2;
+    }
     if (url) {
       fetch(url)
         .then((response) => response.json())
@@ -65,6 +71,8 @@ export class Fetch {
 
   //load people stats
   loadStats(jsObject) {
+    url2 = '';
+
     //Character Stats
     for (
       let i = 0;
@@ -143,7 +151,10 @@ f.addChar(charArray, url);
 document.getElementById("a").addEventListener("click", (e) => {
   let element = e.target;
   changePage(Number(element.innerHTML));
-  f.createLst(url + Number(element.innerHTML));
 
-  console.log(element);
+  if (Number(element.innerHTML) <= 9){
+  f.createLst(url + Number(element.innerHTML));
+  } else {
+    f.createLst(jUrl2)
+  }
 });
