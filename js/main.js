@@ -42,7 +42,7 @@ const links = [
   },
   {
     title: "Challenge 2",
-    url: "challenge2/index.html"
+    url: "challenge2/star.html"
   }
 ]
 
