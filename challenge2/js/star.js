@@ -25,7 +25,6 @@ Nbtn.addEventListener("click", () => {
 
   if (page >= 9) {
     fetch.createLst(jUrl);
-    console.log(page)
   } else {
     fetch.createLst(url + page);
   }

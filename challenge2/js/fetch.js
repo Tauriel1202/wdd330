@@ -17,28 +17,23 @@ export class Fetch {
     fetch(url)
       .then((response) => response.json())
       .then((jsObject) => {
-        console.log(jsObject)
         people.innerHTML = "";
 
         //New Page
-        console.log(jsObject.next)
         if (!jsObject.next) {
           oldJsobj = jsObject;
           url2 = jUrl;
-          console.log(url2)
         }
         if (!jsObject.next) {
           changeMaxPage(page);
         }
-        if (jsObject.results.length < 10 & jsObject.next == null) {
+        if ((jsObject.results.length < 10) & (jsObject.next == null)) {
           fetch(url2)
             .then((response2) => response2.json())
             .then((jsObject2) => {
-              
               // loadStats: extendObj => jsObject, jsObject2
               jsObject.results = [...jsObject.results, ...jsObject2.results];
               this.loadStats(jsObject);
-             
             });
         } else {
           this.loadStats(jsObject);
@@ -48,8 +43,8 @@ export class Fetch {
 
   //create a lst of chars to select
   addChar(charArray, url) {
-    if (url == null){
-      url =jUrl2;
+    if (url == null) {
+      url = jUrl;
     }
     if (url) {
       fetch(url)
@@ -58,12 +53,14 @@ export class Fetch {
           for (let i = 0; i < jsObject.results.length; i++) {
             charArray.push(jsObject.results[i].name);
           }
-          let button = document.createElement("button");
-          button.innerHTML = document.getElementById("a").childElementCount + 1;
+          if (url <= jUrl) {
+            let button = document.createElement("button");
+            button.innerHTML =
+              document.getElementById("a").childElementCount + 1;
 
-          // a.setAttribute('href', )
-          document.getElementById("a").append(button);
-          this.addChar(charArray, jsObject.next);
+            document.getElementById("a").append(button);
+            this.addChar(charArray, jsObject.next);
+          }
           view.createSelect(charArray);
         });
     }
@@ -71,7 +68,7 @@ export class Fetch {
 
   //load people stats
   loadStats(jsObject) {
-    url2 = '';
+    url2 = "";
 
     //Character Stats
     for (
@@ -106,36 +103,55 @@ export class Fetch {
 
         //Film
         const filmP = document.createElement("p");
+        if (typeof(jsObject.results[i].films) == 'object'){
         filmP.textContent = `Number of Films: ${jsObject.results[i].films.length}`;
+        } else {
+          filmP.innerHTML = `Number of Films: ${jsObject.results[i].films}`
+        }
+
 
         //Planets
         const planetUrl = jsObject.results[i].homeworld;
 
-        fetch(planetUrl)
-          .then((response) => response.json())
-          .then((planetJson) => {
-            const homeP = document.createElement("p");
-            homeP.textContent = `Home Planet: ${planetJson.name}`;
-            div.insertBefore(homeP, genP);
-          });
+        if (jsObject.results[i].homeworld.includes('https')) {
+          fetch(planetUrl)
+            .then((response) => response.json())
+            .then((planetJson) => {
+              const homeP = document.createElement("p");
+              homeP.textContent = `Home Planet: ${planetJson.name}`;
+              div.insertBefore(homeP, genP);
+            });
+        } else {
+          const homeP = document.createElement("p");
+          homeP.innerHTML = `Home Planet: ${planetUrl}`;
+          div.append(homeP);
+        }
 
         //Ships
-        if (jsObject.results[i].starships.length) {
-          const sp = document.createElement("p");
-          sp.textContent = "Ships: ";
+        if (typeof(jsObject.results[i].starships) == "object") {
+          if (jsObject.results[i].starships.length) {
+            const sp = document.createElement("p");
+            sp.textContent = "Ships: ";
 
-          for (let j = jsObject.results[i].starships.length - 1; j >= 0; j--) {
-            const shipUrl = jsObject.results[i].starships[j];
-            console.log(shipUrl);
+            for (
+              let j = jsObject.results[i].starships.length - 1;
+              j >= 0;
+              j--
+            ) {
+              const shipUrl = jsObject.results[i].starships[j];
 
-            fetch(shipUrl)
-              .then((response) => response.json())
-              .then((shipJson) => {
-                console.log(shipJson);
-                sp.textContent += shipJson.name + (j == 0 ? "" : ", ");
-              });
+              fetch(shipUrl)
+                .then((response) => response.json())
+                .then((shipJson) => {
+                  sp.textContent += shipJson.name + (j == 0 ? "" : ", ");
+                });
+            }
+            div.append(sp);
           }
-          div.append(sp);
+        } else {
+          const p = document.createElement("p");
+          p.innerHTML = `Ships: ${jsObject.results[i].starships}`;
+          div.append(p);
         }
         div.append(genP, hairP, eyeP, skinP, filmP);
       });
@@ -152,9 +168,9 @@ document.getElementById("a").addEventListener("click", (e) => {
   let element = e.target;
   changePage(Number(element.innerHTML));
 
-  if (Number(element.innerHTML) <= 9){
-  f.createLst(url + Number(element.innerHTML));
+  if (Number(element.innerHTML) <= 9) {
+    f.createLst(url + Number(element.innerHTML));
   } else {
-    f.createLst(jUrl2)
+    f.createLst(jUrl2);
   }
 });

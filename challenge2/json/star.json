@@ -25,7 +25,7 @@
     },
     {
       "name": "Grogu",
-      "homeworld": "Coruscant",
+      "homeworld": "unknown",
       "films": 19,
       "gender": "male",
       "eye_color": "dark brown",
@@ -40,7 +40,8 @@
       "gender": "female",
       "eye_color": "unknown",
       "hair_color": "unknown",
-      "skin_color": "gold and red"
+      "skin_color": "gold and red",
+      "starships": "n/a"
     },
     {
       "name": "Cara Dune",
