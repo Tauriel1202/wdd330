@@ -1,6 +1,6 @@
 //Fetch
 import { View } from "./view.js";
-import { page, changeMaxPage, changePage } from "./star.js";
+import { page, changeMaxPage, changePage, maxPage } from "./star.js";
 
 let view = new View();
 let charArray = [];
@@ -24,7 +24,7 @@ export class Fetch {
           oldJsobj = jsObject;
           url2 = jUrl;
         }
-        if (!jsObject.next) {
+        if (jsObject.next == 'max') {
           changeMaxPage(page);
         }
         if ((jsObject.results.length < 10) & (jsObject.next == null)) {

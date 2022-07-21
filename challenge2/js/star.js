@@ -23,8 +23,8 @@ addLocal();
 Nbtn.addEventListener("click", () => {
   page += page < maxPage ? 1 : 0;
 
-  if (page >= 9) {
-    fetch.createLst(jUrl);
+  if (page > 9) {
+    fetch.createLst(`https://tauriel1202.github.io/wdd330/challenge2/json/star${page-8}.json`);
   } else {
     fetch.createLst(url + page);
   }
