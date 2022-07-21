@@ -5,7 +5,7 @@
 }
 /*#region SMALL*/
 body {
-  background-image: url("./starBground.jpg");
+  background-image: url("./stars.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   color: rgb(255, 242, 0);
@@ -25,9 +25,9 @@ p {
   margin: 0.3em;
 }
 form {
-  background-color: #0f003e;
+  background-color: #060025;
   margin: 5%;
-  border: 2px solid #200769;
+  border: 2px solid #050c68;
   padding-bottom: 1em;
 }
 form input {
